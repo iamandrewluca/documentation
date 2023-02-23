@@ -1,0 +1,25 @@
+/** Component: Markdown */
+
+$selector-markdown: ".theme-doc-markdown.markdown";
+
+#{$selector-markdown} {
+  font-weight: 400;
+
+  a {
+    color: var(--strapi-primary-600);
+    font-weight: 600;
+  }
+
+  code {
+    font-weight: 700;
+  }
+}
+
+/** Dark mode */
+@include dark {
+  #{$selector-markdown} {
+    a {
+      color: var(--strapi-dark-primary-600);
+    }
+  }
+}

@@ -1,0 +1,82 @@
+/** Base: General Styles */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 35px;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+code {
+  font-family:
+    "SFMono-Regular",
+    "Menlo",
+    "Monaco",
+    "Consolas",
+    "Liberation Mono",
+    "Courier New",
+    monospace
+  ;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+p, li, table {
+  code {
+    font-size: 13px;
+  }
+}
+
+/** Light mode */
+@include light {
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--strapi-neutral-900);
+  }
+
+  code {
+    background-color: var(--strapi-primary-100);
+    color: var(--strapi-primary-600);
+    border-color: var(--strapi-primary-200);
+  }
+}
+
+/** Dark mode */
+@include dark {
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--strapi-dark-neutral-900);
+  }
+
+  code {
+    /* Commented out for now because I find that the contrast is better without these */
+    /* background-color: var(--strapi-dark-neutral-600);
+    color: var(--strapi-dark-neutral-100); */
+  }
+
+  pre:not(.prism-code) code {
+    background-color: var(--strapi-dark-warning-200);
+  }
+
+  .main-wrapper,
+  .navbar,
+  .theme-doc-sidebar-container nav ~ button {
+    background-color: var(--strapi-dark-neutral-0);
+  }
+
+  .navbar {
+    border-bottom: solid 1px var(--strapi-dark-neutral-150);
+  }
+
+  .container img[width="16"] {
+    /* 'Temporary' fix while we figure a way to display white icons in dark mode 😅  */
+    background-color: white;
+    border-radius: 2px;
+    padding: 1px;
+  }
+}

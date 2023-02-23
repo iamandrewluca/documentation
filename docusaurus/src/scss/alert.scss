@@ -1,0 +1,24 @@
+/** Component: Alert */
+
+.alert {
+  --ifm-link-decoration: none;
+  --ifm-alert-border-radius: var(--strapi-spacing-1);
+  --ifm-alert-border-left-width: var(--strapi-spacing-1);
+
+  &.admonition--strapi {
+    --ifm-alert-foreground-color: var(--strapi-neutral-800);
+    --ifm-alert-background-color: var(--strapi-primary-100);
+    --ifm-alert-border-color: var(--strapi-primary-600);
+  }
+}
+
+/** Dark mode */
+@include dark {
+  .alert {
+    &.admonition--strapi {
+      --ifm-alert-foreground-color: var(--strapi-dark-neutral-800);
+      --ifm-alert-background-color: var(--strapi-dark-neutral-100);
+      --ifm-alert-border-color: var(--strapi-dark-primary-600);
+    }
+  }
+}

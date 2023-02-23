@@ -1,0 +1,22 @@
+/** Component: Article */
+
+main article {
+  padding-left: var(--main-article-padding-l, 0);
+  padding-right: var(--main-article-padding-r, 0);
+}
+
+/** Responsive */
+@include medium-up {
+  :root {
+    --main-article-padding-l: 2em;
+    --main-article-padding-r: 2em;
+  }
+}
+
+/** Responsive */
+@include large-up {
+  :root {
+    --main-article-padding-l: 6em;
+    --main-article-padding-r: 4em;
+  }
+}

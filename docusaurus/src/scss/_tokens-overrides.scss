@@ -1,0 +1,42 @@
+/** Core: Docusaurus/Infima Style Tokens Overrides */
+
+:root body {
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  --ifm-font-color-base: var(--strapi-neutral-800);
+  --ifm-color-content: var(--strapi-neutral-800);
+  --ifm-color-primary: var(--strapi-primary-600);
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+
+  --ifm-table-stripe-background: #DCDCE43E;
+
+  --ifm-code-font-size: 95%;
+  --ifm-link-decoration: none;
+  --ifm-link-hover-decoration: none;
+
+  --ifm-alert-border-color: transparent;
+}
+
+/* Dark mode */
+@include dark {
+  body {
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+    --ifm-font-color-base: var(--strapi-dark-neutral-800);
+    --ifm-color-content: var(--strapi-dark-neutral-800);
+    --ifm-color-primary: var(--strapi-primary-500);
+    --ifm-color-primary-dark: #21af90;
+    --ifm-color-primary-darker: #1fa588;
+    --ifm-color-primary-darkest: #1a8870;
+    --ifm-color-primary-light: #29d5b0;
+    --ifm-color-primary-lighter: #32d8b4;
+    --ifm-color-primary-lightest: #4fddbf;
+
+    --ifm-navbar-background-color: #212134;
+  }
+}

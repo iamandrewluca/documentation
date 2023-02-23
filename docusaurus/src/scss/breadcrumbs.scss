@@ -1,0 +1,12 @@
+/** Component: Breadcrumbs */
+
+.breadcrumbs {
+  --ifm-breadcrumb-item-background-active: transparent;
+  --ifm-breadcrumb-color-active: var(--strapi-neutral-800);
+
+  &__item {
+    &--active {
+      font-weight: 700;
+    }
+  }
+}

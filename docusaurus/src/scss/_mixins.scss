@@ -1,0 +1,34 @@
+/** Core: Sass Mixins */
+
+/** Mixin: Responsive */
+@mixin medium-up {
+  @media (min-width: 997px) {
+    @content;
+  }
+}
+
+/** Mixin: Responsive */
+@mixin large-up {
+  @media (min-width: 1536px) {
+    @content;
+  }
+}
+
+/** Mixin: Dark mode */
+@mixin dark {
+  html[data-theme='dark'] {
+    @content;
+  }
+}
+
+/** Mixin: Light mode */
+@mixin light {
+  html[data-theme='light'] {
+    @content;
+  }
+}
+
+/** Mixin: Transition */
+@mixin transition {
+  transition: all 0.2s ease;
+}
