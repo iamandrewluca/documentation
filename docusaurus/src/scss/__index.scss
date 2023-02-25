@@ -5,12 +5,12 @@
  */
 
 /** Core */
-@import '_mixins';
-@import '_tokens';
-@import '_tokens-overrides';
+@import '_mixins.scss';
+@import '_tokens.scss';
+@import '_tokens-overrides.scss';
 
 /** Base */
-@import '_base';
+@import '_base.scss';
 
 /** Components */
 @import 'alert.scss';

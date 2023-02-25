@@ -1,18 +1,27 @@
 /** Core: Strapi Design System Tokens */
 
-:root body {
+:root {
   /** Spacing */
-  --strapi-spacing-1: 4px;
-  --strapi-spacing-2: 8px;
-  --strapi-spacing-3: 12px;
-  --strapi-spacing-4: 16px;
-  --strapi-spacing-5: 20px;
-  --strapi-spacing-6: 24px;
-  --strapi-spacing-7: 32px;
-  --strapi-spacing-8: 40px;
-  --strapi-spacing-9: 48px;
-  --strapi-spacing-10: 56px;
-  --strapi-spacing-11: 64px;
+  --strapi-spacing-0: 0;          // 0px
+  --strapi-spacing-1: 0.25rem;    // 4px
+  --strapi-spacing-2: 0.5rem;     // 8px
+  --strapi-spacing-3: 0.75rem;    // 12px
+  --strapi-spacing-4: 1rem;       // 16px
+  --strapi-spacing-5: 1.25rem;    // 20px
+  --strapi-spacing-6: 1.5rem;     // 24px
+  --strapi-spacing-7: 2rem;       // 32px
+  --strapi-spacing-8: 2.5rem;     // 40px
+  --strapi-spacing-9: 3rem;       // 48px
+  --strapi-spacing-10: 3.5rem;    // 56px
+  --strapi-spacing-11: 3.75rem;   // 64px
+
+  /** Fonts */
+  --strapi-font-size-xxs: 0.6875rem;  // 11px
+  --strapi-font-size-xs: 0.75rem;     // 12px
+  --strapi-font-size-sm: 0.875rem;    // 14px
+  --strapi-font-size-md: 1rem;        // 16px
+  --strapi-font-size-lg: 1.125rem;    // 18px
+  --strapi-font-size-xl: 2rem;        // 32px
 
   /** Color: Neutral */
   --strapi-neutral-900: #212134;
@@ -20,6 +29,7 @@
   --strapi-neutral-700: #4A4A6A;
   --strapi-neutral-600: #666687;
   --strapi-neutral-500: #8E8EA9;
+  --strapi-neutral-400: #A5A5BA;
   --strapi-neutral-300: #C0C0CF;
   --strapi-neutral-200: #DCDCE4;
   --strapi-neutral-150: #EAEAEF;
@@ -27,6 +37,7 @@
   --strapi-neutral-0: #FFFFFF;
 
   /** Color: Primary */
+  --strapi-primary-700: #271FE0;
   --strapi-primary-600: #4945FF;
   --strapi-primary-500: #7B79FF;
   --strapi-primary-200: #D9D8FF;
@@ -74,30 +85,36 @@
   --strapi-code-rose: #FF79C6;
   --strapi-code-purple: #BD93F9;
   --strapi-code-dark-blue: #6272A4;
+
+  /** Components */
+  --strapi-input-border-color: var(--strapi-neutral-200);
+  --strapi-input-border-width: 1px;
+  --strapi-input-border-style: solid;
+  --strapi-input-border:
+    var(--strapi-input-border-width)
+    var(--strapi-input-border-style)
+    var(--strapi-input-border-color)
+  ;
 }
 
 /** Dark mode */
 @include dark {
-  body {
-    /** Experiment */
-    --strapi-neutral-800: #FFFFFF;
+  /** Dark Color: Neutral */
+  --strapi-neutral-900: #FFFFFF; /* both 800 and 900 identical in Figma */
+  --strapi-neutral-800: #FFFFFF;
+  --strapi-neutral-700: #EAEAEF;
+  --strapi-neutral-600: #666687;
+  --strapi-neutral-400: #A5A5BA; /* incorrecly named in Figma */
+  --strapi-neutral-150: #32324D;
+  --strapi-neutral-200: #4A4A6A;
+  --strapi-neutral-100: #181826;
+  --strapi-neutral-0: #212134;
 
-    /** Dark Color: Neutral */
-    --strapi-dark-neutral-900: #FFFFFF; /* both 800 and 900 identical in Figma */
-    --strapi-dark-neutral-800: #FFFFFF;
-    --strapi-dark-neutral-700: #EAEAEF;
-    --strapi-dark-neutral-600: #666687;
-    --strapi-dark-neutral-400: #A5A5BA; /* incorrecly named in Figma */
-    --strapi-dark-neutral-150: #32324D;
-    --strapi-dark-neutral-100: #181826;
-    --strapi-dark-neutral-0: #212134;
+  /** Dark Color: Primary */
+  --strapi-primary-600: #7B79FF;
 
-    /** Dark Color: Primary */
-    --strapi-dark-primary-600: #7B79FF;
-
-    /** Dark Color: Warning */
-    --strapi-dark-warning-700: #FAE7B9;
-    --strapi-dark-warning-600: #F29D41;
-    --strapi-dark-warning-200: #4A4A6A;
-  }
+  /** Dark Color: Warning */
+  --strapi-warning-700: #FAE7B9;
+  --strapi-warning-600: #F29D41;
+  --strapi-warning-200: #4A4A6A;
 }

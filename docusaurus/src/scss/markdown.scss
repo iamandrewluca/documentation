@@ -3,23 +3,37 @@
 $selector-markdown: ".theme-doc-markdown.markdown";
 
 #{$selector-markdown} {
+  --markdown-link-color: var(--strapi-primary-600);
+
   font-weight: 400;
 
   a {
-    color: var(--strapi-primary-600);
+    color: var(--markdown-link-color);
     font-weight: 600;
   }
 
-  code {
-    font-weight: 700;
+  // code {
+  //   font-weight: 700;
+  // }
+
+  > h2 {
+    position: relative;
+
+    &:after {
+      content: " ";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -10px;
+      height: 1px;
+      background-color: var(--custom-heading-decorative-line-color);
+    }
   }
 }
 
 /** Dark mode */
 @include dark {
   #{$selector-markdown} {
-    a {
-      color: var(--strapi-dark-primary-600);
-    }
+    --markdown-link-color: var(--strapi-primary-600);
   }
 }

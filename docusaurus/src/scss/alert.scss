@@ -2,13 +2,42 @@
 
 .alert {
   --ifm-link-decoration: none;
-  --ifm-alert-border-radius: var(--strapi-spacing-1);
+
+  --ifm-alert-border-radius: 0;
   --ifm-alert-border-left-width: var(--strapi-spacing-1);
 
-  &.admonition--strapi {
-    --ifm-alert-foreground-color: var(--strapi-neutral-800);
-    --ifm-alert-background-color: var(--strapi-primary-100);
-    --ifm-alert-border-color: var(--strapi-primary-600);
+  --ifm-heading-font-weight: 600;
+  --ifm-h5-font-size: 16px;
+  --ifm-heading-line-height: 24px;
+
+  &.admonition {
+
+    &--strapi {
+      --custom-alert-title-color: var(--strapi-primary-700);
+
+      --ifm-alert-background-color: var(--strapi-primary-100);
+      --ifm-alert-border-color: var(--strapi-primary-600);
+      --ifm-alert-foreground-color: var(--strapi-neutral-800);
+
+      .admonition {
+        &__custom-title {
+          color: var(--custom-alert-title-color);
+        }
+      }
+    }
+
+    &--prerequisites {
+      --ifm-alert-background-color: var(--strapi-neutral-100);
+      --ifm-alert-border-color: var(--strapi-neutral-600);
+      --ifm-alert-foreground-color: var(--strapi-neutral-700);
+    }
+  }
+
+  .admonition {
+    &__custom-title {
+      margin-bottom: 0.5rem;
+      text-transform: none;
+    }
   }
 }
 
@@ -16,9 +45,10 @@
 @include dark {
   .alert {
     &.admonition--strapi {
-      --ifm-alert-foreground-color: var(--strapi-dark-neutral-800);
-      --ifm-alert-background-color: var(--strapi-dark-neutral-100);
-      --ifm-alert-border-color: var(--strapi-dark-primary-600);
+      --custom-alert-title-color: var(--strapi-primary-600);
+      --ifm-alert-foreground-color: var(--strapi-neutral-800);
+      --ifm-alert-background-color: var(--strapi-neutral-100);
+      --ifm-alert-border-color: var(--strapi-primary-600);
     }
   }
 }
