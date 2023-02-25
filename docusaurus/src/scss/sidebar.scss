@@ -1,0 +1,44 @@
+/** Components: Menu */
+
+:root body {
+  --doc-sidebar-width: 290px;
+}
+
+.theme-doc-sidebar-container {
+  .menu {
+    --ifm-menu-color-background-hover: var(--strapi-neutral-100);
+
+    &__list {
+      &-item-collapsible {
+        &:hover {
+          background-color: var(--ifm-menu-color-background-hover);
+        }
+      }
+    }
+
+    &__link--active {
+      --ifm-menu-color-active: var(--strapi-neutral-700);
+
+      &:not(.menu__link--sublist) {
+        --ifm-menu-color-active: var(--strapi-primary-600);
+      }
+    }
+  }
+}
+
+/** Dark mode */
+@include dark {
+  .theme-doc-sidebar-container {
+    .menu {
+      --ifm-menu-color-background-hover: var(--strapi-neutral-100);
+
+      &__link--active {
+        --ifm-menu-color-active: var(--strapi-neutral-800);
+
+        &:not(.menu__link--sublist) {
+          --ifm-menu-color-active: var(--strapi-primary-500);
+        }
+      }
+    }
+  }
+}

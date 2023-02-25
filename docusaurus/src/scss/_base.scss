@@ -45,43 +45,30 @@ p, li, table {
   }
 }
 
-/** Light mode */
-@include light {
-  h1, h2, h3, h4, h5, h6 {
-    color: var(--strapi-neutral-900);
-  }
-
-  code {
-    background-color: var(--strapi-primary-100);
-    color: var(--strapi-primary-600);
-    border-color: var(--strapi-primary-200);
-  }
+code {
+  background-color: var(--custom-code-background-color);
+  border-color: var(--custom-code-border-color);
+  color: var(--custom-code-color);
 }
 
 /** Dark mode */
 @include dark {
   h1, h2, h3, h4, h5, h6 {
-    color: var(--strapi-dark-neutral-900);
-  }
-
-  code {
-    /* Commented out for now because I find that the contrast is better without these */
-    /* background-color: var(--strapi-dark-neutral-600);
-    color: var(--strapi-dark-neutral-100); */
+    --ifm-heading-color: var(--strapi-neutral-900);
   }
 
   pre:not(.prism-code) code {
-    background-color: var(--strapi-dark-warning-200);
+    background-color: var(--strapi-warning-200);
   }
 
   .main-wrapper,
   .navbar,
   .theme-doc-sidebar-container nav ~ button {
-    background-color: var(--strapi-dark-neutral-0);
+    background-color: var(--strapi-neutral-0);
   }
 
   .navbar {
-    border-bottom: solid 1px var(--strapi-dark-neutral-150);
+    border-bottom: solid 1px var(--strapi-neutral-150);
   }
 
   .container img[width="16"] {
