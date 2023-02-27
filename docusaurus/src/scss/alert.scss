@@ -1,8 +1,7 @@
 /** Component: Alert */
 
 .alert {
-  --ifm-link-decoration: none;
-
+  // --ifm-alert-border-color: transparent;
   --ifm-alert-border-radius: 0;
   --ifm-alert-border-left-width: var(--strapi-spacing-1);
 
@@ -10,8 +9,9 @@
   --ifm-h5-font-size: 16px;
   --ifm-heading-line-height: 24px;
 
-  &.admonition {
+  --ifm-link-decoration: none;
 
+  &.admonition {
     &--strapi {
       --custom-alert-title-color: var(--strapi-primary-700);
 

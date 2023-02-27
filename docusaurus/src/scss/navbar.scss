@@ -3,6 +3,18 @@
 $selector-color-mode-toggle-button: 'button[class*="ColorModeToggle"]';
 $selector-color-mode-toggle-wrapper: 'div[class*="ColorModeToggle"]';
 
+:root body {
+  --docsearch-searchbox-background: var(--strapi-neutral-150);
+  --docsearch-searchbox-shadow: 0 0 0 2px var(--strapi-primary-600);
+  --docsearch-muted-color: var(--strapi-neutral-400);
+  --docsearch-text-color: var(--strapi-neutral-400);
+
+  --ifm-navbar-height: 56px;
+  --ifm-navbar-padding-vertical: var(--strapi-spacing-1);
+  --ifm-navbar-padding-horizontal: var(--strapi-spacing-2);
+  --ifm-navbar-shadow: 0 1px 0 0 var(--strapi-neutral-150);
+}
+
 .navbar {
   --custom-navbar-brand-mr: 0;
   --custom-navbar-icon-button-size: 36px;
@@ -10,15 +22,7 @@ $selector-color-mode-toggle-wrapper: 'div[class*="ColorModeToggle"]';
   --custom-navbar-items-font-size: var(--strapi-font-size-sm);
   --custom-navbar-items-gap: var(--strapi-spacing-2);
   --custom-navbar-logo-img-height: 25px;
-
-  --docsearch-searchbox-background: var(--strapi-neutral-150);
-  --docsearch-searchbox-shadow: 0 0 0 2px var(--strapi-primary-600);
-  --docsearch-muted-color: var(--strapi-neutral-400);
-  --docsearch-text-color: var(--strapi-neutral-400);
-
-  --ifm-navbar-padding-vertical: var(--strapi-spacing-1);
-  --ifm-navbar-padding-horizontal: var(--strapi-spacing-2);
-  --ifm-navbar-shadow: 0 1px 0 0 var(--strapi-neutral-150);
+  --custom-navbar-logo-img-width: 194px;
 
   &__items {
     max-width: var(--custom-navbar-items-width);
@@ -41,6 +45,7 @@ $selector-color-mode-toggle-wrapper: 'div[class*="ColorModeToggle"]';
 
     img {
       height: var(--custom-navbar-logo-img-height);
+      width: var(--custom-navbar-logo-img-width);
     }
   }
 
@@ -78,44 +83,11 @@ $selector-color-mode-toggle-wrapper: 'div[class*="ColorModeToggle"]';
     height: var(--custom-navbar-icon-button-size);
     width: var(--custom-navbar-icon-button-size);
   }
-
-  /** Navbar Header used inside the Sidebar on mobile screen **/
-  &-sidebar {
-    &__brand {
-      --custom-navbar-sidebar-horizontal-padding: calc(var(--custom-navbar-items-gap) * 2);
-      --ifm-navbar-padding-horizontal:
-        var(--custom-navbar-items-gap)
-        var(--ifm-navbar-padding-vertical)
-        var(--custom-navbar-sidebar-horizontal-padding)
-      ;
-
-      gap: var(--custom-navbar-items-gap);
-      justify-content: space-between;
-
-      .navbar-sidebar__close,
-      #{$selector-color-mode-toggle-wrapper} {
-        display: flex;
-      }
-
-      .navbar-sidebar__close {
-        margin-left: initial;
-      }
-
-      #{$selector-color-mode-toggle-wrapper} {
-        margin-right: 0 !important;
-      }
-    }
-  }
 }
 
 /** Responsive */
-@include medium-up {
+@include small-up {
   .navbar {
-    --custom-navbar-brand-mr: 60px;
-    --custom-navbar-items-gap: var(--strapi-spacing-4);
-
-    --ifm-navbar-padding-horizontal: var(--custom-navbar-items-gap);
-
     .DocSearch-Button {
       --custom-navbar-icon-button-hover-background: transparent;
 
@@ -163,5 +135,15 @@ $selector-color-mode-toggle-wrapper: 'div[class*="ColorModeToggle"]';
         justify-content: end;
       }
     }
+  }
+}
+
+/** Responsive */
+@include medium-up {
+  .navbar {
+    --custom-navbar-brand-mr: 60px;
+    --custom-navbar-items-gap: var(--strapi-spacing-4);
+
+    --ifm-navbar-padding-horizontal: var(--custom-navbar-items-gap);
   }
 }

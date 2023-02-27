@@ -61,16 +61,6 @@ code {
     background-color: var(--strapi-warning-200);
   }
 
-  .main-wrapper,
-  .navbar,
-  .theme-doc-sidebar-container nav ~ button {
-    background-color: var(--strapi-neutral-0);
-  }
-
-  .navbar {
-    border-bottom: solid 1px var(--strapi-neutral-150);
-  }
-
   .container img[width="16"] {
     /* 'Temporary' fix while we figure a way to display white icons in dark mode 😅  */
     background-color: white;

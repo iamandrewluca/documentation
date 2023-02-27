@@ -17,17 +17,17 @@
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
 
-  --ifm-link-color: var(--strapi-primary-600);
-
-  --ifm-navbar-height: 56px;
-
-  --ifm-table-stripe-background: #DCDCE43E;
-
   --ifm-code-font-size: 95%;
+
+  --ifm-link-color: var(--strapi-primary-600);
   --ifm-link-decoration: none;
   --ifm-link-hover-decoration: none;
 
-  --ifm-alert-border-color: transparent;
+  --ifm-scrollbar-track-background-color: var(--strapi-neutral-100);
+  --ifm-scrollbar-thumb-background-color: var(--strapi-neutral-200);
+  --ifm-scrollbar-thumb-hover-background-color: var(--strapi-neutral-300);
+
+  --ifm-table-stripe-background: #DCDCE43E;
 }
 
 /* Dark mode */
@@ -49,4 +49,8 @@
   --ifm-link-color: var(--strapi-primary-500);
 
   --ifm-navbar-background-color: #212134;
+
+  --ifm-scrollbar-track-background-color: var(--strapi-neutral-100);
+  --ifm-scrollbar-thumb-background-color: var(--strapi-neutral-150);
+  --ifm-scrollbar-thumb-hover-background-color: var(--strapi-neutral-200);
 }
