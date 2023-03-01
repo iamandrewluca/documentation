@@ -20,9 +20,12 @@ $selector-color-mode-toggle-wrapper: 'div[class*="ColorModeToggle"]';
   --custom-navbar-icon-button-size: 36px;
   --custom-navbar-icon-button-hover-background: var(--strapi-neutral-100);
   --custom-navbar-items-font-size: var(--strapi-font-size-sm);
-  --custom-navbar-items-gap: var(--strapi-spacing-2);
+  --custom-navbar-items-gap: var(--strapi-spacing-3);
   --custom-navbar-logo-img-height: 25px;
   --custom-navbar-logo-img-width: 194px;
+  --custom-navbar-toggle-mr: var(--strapi-spacing-1);
+
+  --ifm-navbar-padding-horizontal: var(--custom-navbar-items-gap);
 
   &__items {
     max-width: var(--custom-navbar-items-width);
@@ -35,9 +38,12 @@ $selector-color-mode-toggle-wrapper: 'div[class*="ColorModeToggle"]';
     line-height: 0;
   }
 
-  &__brand,
-  &__toggle {
+  &__brand {
     margin-right: var(--custom-navbar-brand-mr);
+  }
+
+  &__toggle {
+    margin-right: var(--custom-navbar-toggle-mr);
   }
 
   &__logo {
@@ -58,6 +64,10 @@ $selector-color-mode-toggle-wrapper: 'div[class*="ColorModeToggle"]';
     &--active {
       --ifm-font-weight-semibold: 700;
     }
+  }
+
+  .DocSearch-Button {
+    width: var(--custom-navbar-search-button-width);
   }
 
   .navbar-sidebar__close,
@@ -96,7 +106,6 @@ $selector-color-mode-toggle-wrapper: 'div[class*="ColorModeToggle"]';
       border-radius: 6px;
       font-family: var(--ifm-font-family-base);
       height: 40px;
-      width: 266px;
       padding: 0 var(--strapi-spacing-3);
 
       svg path {
@@ -143,6 +152,7 @@ $selector-color-mode-toggle-wrapper: 'div[class*="ColorModeToggle"]';
   .navbar {
     --custom-navbar-brand-mr: 60px;
     --custom-navbar-items-gap: var(--strapi-spacing-4);
+    --custom-navbar-search-button-width: 266px;
 
     --ifm-navbar-padding-horizontal: var(--custom-navbar-items-gap);
   }

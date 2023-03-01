@@ -1,0 +1,32 @@
+:root body {
+
+}
+
+.table-of-contents {
+  font-size: 12px;
+
+  &__link {
+    --custom-table-of-contents-link-active-before-left: -16px;
+
+    position: relative;
+
+    &--active {
+      &:before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: var(--custom-table-of-contents-link-active-before-left);
+        width: 3px;
+        border-radius: 0 2px 2px 0;
+        background-color: var(--strapi-primary-600);
+      }
+    }
+
+    + ul li .table-of-contents {
+      &__link {
+        --custom-table-of-contents-link-active-before-left: -32px;
+      }
+    }
+  }
+}
